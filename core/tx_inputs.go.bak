@@ -1,0 +1,14 @@
+package core
+
+import (
+	"bytes"
+
+	"github.com/guoxingx/gxchain/accounts"
+	"github.com/guoxingx/gxchain/core/types"
+)
+
+func (in *types.TXInput) UsesKey(pubKeyHash []byte) bool {
+	lockingHash := accounts.HashPubKey(in.PubKey)
+
+	return bytes.Compare(lockingHash, pubKeyHash) == 0
+}

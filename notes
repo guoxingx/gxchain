@@ -1,0 +1,9 @@
+1. merkel tree [done]
+
+2. transaction input output [done]
+
+3. elliptic curve digital signature algorithm
+
+4. base58
+
+5. golang.org/x/crypto/ripemd160 [done]
